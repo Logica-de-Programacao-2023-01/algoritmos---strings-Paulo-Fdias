@@ -1,0 +1,19 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var input string
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&input)
+
+	result := removeEspacos(input)
+	fmt.Println("Resultado:", result)
+}
+
+func removeEspacos(str string) string {
+	return strings.ReplaceAll(str, " ", "")
+}
