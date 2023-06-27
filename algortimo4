@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var str1, str2 string
+
+	// Solicitar a primeira string ao usuário
+	fmt.Print("Digite a primeira string: ")
+	fmt.Scanln(&str1)
+
+	// Solicitar a segunda string ao usuário
+	fmt.Print("Digite a segunda string: ")
+	fmt.Scanln(&str2)
+
+	// Comparar as strings, ignorando diferenças entre maiúsculas e minúsculas
+	if strings.EqualFold(str1, str2) {
+		fmt.Println("As strings são iguais.")
+	} else {
+		fmt.Println("As strings são diferentes.")
+	}
+}
