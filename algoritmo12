@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func isPalindromo(str string) bool {
+	// Remover espaços em branco e converter para letras minúsculas
+	str = strings.ToLower(strings.ReplaceAll(str, " ", ""))
+
+	// Verificar se a string é um palíndromo
+	for i := 0; i < len(str)/2; i++ {
+		if str[i] != str[len(str)-1-i] {
+			return false
+		}
+	}
+
+	return true
+}
+
+func main() {
+	var input string
+
+	// Solicitar a entrada do usuário
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&input)
+
+	// Verificar se a string é um palíndromo
+	if isPalindromo(input) {
+		fmt.Println("A string é um palíndromo.")
+	} else {
+		fmt.Println("A string não é um palíndromo.")
+	}
+}
