@@ -1,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func removeVogais(str string) string {
+	vogais := []string{"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"}
+
+	// Substituir as vogais por uma string vazia
+	for _, vogal := range vogais {
+		str = strings.ReplaceAll(str, vogal, "")
+	}
+
+	return str
+}
+
+func main() {
+	var input string
+
+	// Solicitar a entrada do usuário
+	fmt.Print("Digite uma string: ")
+	fmt.Scanln(&input)
+
+	// Remover as vogais da string
+	resultado := removeVogais(input)
+
+	// Exibir o resultado
+	fmt.Println("Resultado:", resultado)
+}
